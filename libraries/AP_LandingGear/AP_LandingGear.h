@@ -9,7 +9,7 @@
 #define AP_LANDINGGEAR_SERVO_DEPLOY_PWM_DEFAULT     1750    // default PWM value to move servo to when landing gear is down
 
 //useradd
-#define AP_LANDINGGEAR_SERVO_RETRACT_HIGH_DEFAULT   10      // default HIGH
+#define AP_LANDINGGEAR_SERVO_RETRACT_HIGH_DEFAULT   0      // default HIGH
 //useradd
 
 /// @class	AP_LandingGear
