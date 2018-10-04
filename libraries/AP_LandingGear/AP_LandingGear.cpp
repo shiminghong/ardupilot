@@ -33,6 +33,15 @@ const AP_Param::GroupInfo AP_LandingGear::var_info[] = {
     // @User: Standard
     AP_GROUPINFO("STARTUP", 2, AP_LandingGear, _startup_behaviour, (uint8_t)AP_LandingGear::LandingGear_Startup_WaitForPilotInput),
 
+	//useradd
+	// @Param: AUTORTRACT
+    // @DisplayName: Landing Gear Startup position
+    // @Description: Landing Gear Startup behaviour control
+    // @Values: 0:WaitForPilotInput, 1:Retract, 2:Deploy
+    // @User: Standard
+    AP_GROUPINFO("AUTORTRACT", 3, AP_LandingGear, _autoretract_high, AP_LANDINGGEAR_SERVO_RETRACT_HIGH_DEFAULT),
+	//useradd
+
     AP_GROUPEND
 };
 
@@ -85,3 +94,10 @@ void AP_LandingGear::retract()
     // reset deployed flag
     _deployed = false;
 }
+
+//useradd
+int AP_LandingGear::autoretract()
+{
+     return _autoretract_high;
+}
+//useradd

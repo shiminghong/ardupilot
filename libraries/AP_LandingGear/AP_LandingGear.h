@@ -8,6 +8,10 @@
 #define AP_LANDINGGEAR_SERVO_RETRACT_PWM_DEFAULT    1250    // default PWM value to move servo to when landing gear is up
 #define AP_LANDINGGEAR_SERVO_DEPLOY_PWM_DEFAULT     1750    // default PWM value to move servo to when landing gear is down
 
+//useradd
+#define AP_LANDINGGEAR_SERVO_RETRACT_HIGH_DEFAULT   10      // default HIGH
+//useradd
+
 /// @class	AP_LandingGear
 /// @brief	Class managing the control of landing gear
 class AP_LandingGear {
@@ -45,10 +49,17 @@ public:
 
     static const struct AP_Param::GroupInfo        var_info[];
 
+	//useradd
+	int autoretract();
+	//useradd
+
 private:
     // Parameters
     AP_Int16    _servo_retract_pwm;     // PWM value to move servo to when gear is retracted
     AP_Int16    _servo_deploy_pwm;      // PWM value to move servo to when gear is deployed
+	//useradd
+	AP_Int16    _autoretract_high;
+	//useradd
     AP_Int8     _startup_behaviour;     // start-up behaviour (see LandingGearStartupBehaviour)
 
     // internal variables
@@ -59,4 +70,6 @@ private:
     
     /// deploy - deploy the landing gear
     void deploy();
+
+	
 };

@@ -331,6 +331,9 @@ enum LoggingParameters {
 #define DATA_WINCH_RELAXED                  68
 #define DATA_WINCH_LENGTH_CONTROL           69
 #define DATA_WINCH_RATE_CONTROL             70
+//useradd
+#define DATA_LANDINGGEAR_RETRACT_HIGH       71 //AUTOLANDINGGEAR_RETRACT
+//useradd
 
 // Error message sub systems and error codes
 #define ERROR_SUBSYSTEM_MAIN                1
